@@ -10,9 +10,9 @@ const TaskListNumbers = () => {
   return (
     <div className='taskcontainer flex items-center justify-center gap-5 mt-10'>
       {Tasklist.map((item,index)=>(
-        <div key={index} className={`card ${item.color} text-white w-[25%] p-10 rounded-md`}>
-          <h2 className='text-3xl font-semibold'>{item.tasks}</h2>
-          <h3 className='text-3xl'>{item.taskType}</h3>
+        <div key={index} className={`card ${item.color} text-white w-[25%] px-10 py-8 rounded-md`}>
+          <h2 className='text-5xl font-bold'>{item.tasks}</h2>
+          <h3 className='text-3xl font-semibold'>{item.taskType}</h3>
         </div>
       ))}
     </div>
