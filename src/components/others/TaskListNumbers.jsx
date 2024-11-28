@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaskListNumbers = () => {
+const TaskListNumbers = ({data}) => {
   let Tasklist = [
     {tasks:0,taskType:"New Task",color:"bg-red-500"},
     {tasks:0,taskType:"New Task",color:"bg-yellow-500"},
