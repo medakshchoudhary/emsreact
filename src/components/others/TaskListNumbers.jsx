@@ -2,10 +2,10 @@ import React from 'react'
 
 const TaskListNumbers = ({data}) => {
   let Tasklist = [
-    {tasks:0,taskType:"New Task",color:"bg-red-500"},
-    {tasks:0,taskType:"New Task",color:"bg-yellow-500"},
-    {tasks:0,taskType:"New Task",color:"bg-green-500"},
-    {tasks:0,taskType:"New Task",color:"bg-blue-500"},
+    {tasks:data.taskCount.newTask,taskType:"New Task",color:"bg-blue-500"},
+    {tasks:data.taskCount.active,taskType:"Active Task",color:"bg-yellow-500"},
+    {tasks:data.taskCount.completed,taskType:"Completed Task",color:"bg-green-500"},
+    {tasks:data.taskCount.failed,taskType:"Failed Task",color:"bg-red-500"},
   ]
   return (
     <div className='taskcontainer flex items-center justify-center gap-5 mt-10'>

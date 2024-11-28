@@ -1,8 +1,8 @@
 import React from 'react'
 
-const FailedTask = () => {
+const CompleteTask = () => {
   return (
-    <div className='taskcard flex-shrink-0 p-8 w-[24vw] h-[45vh] bg-red-500 rounded-lg'>
+    <div className='taskcard flex-shrink-0 p-8 w-[24vw] h-[45vh] bg-green-500 rounded-lg'>
         <div className='flex items-center justify-between'>
           <h3 className='bg-red-600 px-3 py-1 rounded font-semibold'>High</h3>
           <h4>24 nov 2024</h4>
@@ -13,4 +13,4 @@ const FailedTask = () => {
   )
 }
 
-export default FailedTask
+export default CompleteTask
