@@ -5,7 +5,7 @@ const NewTask = ({data}) => {
     <div className='taskcard flex flex-col justify-between flex-shrink-0 p-8 w-fit h-[45vh] bg-blue-500 rounded-lg'>
       <div className="conatiner">
         <div className='flex items-center justify-between'>
-          <h3 className='bg-red-600 px-3 py-1 rounded font-semibold'>High</h3>
+          <h3 className='bg-red-600 px-3 py-1 rounded font-semibold'>{data.category}</h3>
           <h4>{data.date}</h4>
         </div>
         <h2 className='font-bold text-3xl text-nowrap mt-6'>{data.title}</h2>

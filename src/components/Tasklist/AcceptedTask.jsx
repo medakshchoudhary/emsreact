@@ -5,7 +5,7 @@ const AcceptTask = ({data}) => {
     <div className='taskcard flex flex-shrink-0 flex-col justify-between p-8 w-fit h-[45vh] bg-yellow-500 rounded-lg'>
       <div className="container">
         <div className='flex items-center justify-between'>
-          <h3 className='bg-red-600 px-3 py-1 rounded font-semibold'>High</h3>
+          <h3 className='bg-red-600 px-3 py-1 rounded font-semibold'>{data.category}</h3>
           <h4>{data.date}</h4>
         </div>
         <h2 className='font-bold text-3xl text-nowrap mt-6'>{data.title}</h2>
