@@ -48,7 +48,7 @@ const employees = [
     id: 2,
     firstName: "Vihaan",
     lastName: "Gupta",
-    email: "employee2@example.com",
+    email: "e2@e.com",
     password: "123",
     taskCount: {
       active: 2,
@@ -63,7 +63,7 @@ const employees = [
         date: "2024-11-27",
         category: "Meetings",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -82,8 +82,18 @@ const employees = [
         description: "Develop a plan for the next marketing campaign.",
         date: "2024-11-30",
         category: "Marketing",
-        active: true,
+        active: false,
         newTask: false,
+        completed: false,
+        failed: true
+      },
+      {
+        title: "Create Marketing Strategy again",
+        description: "Develop a plan for the next marketing campaign.",
+        date: "2024-11-30",
+        category: "Marketing",
+        active: false,
+        newTask: true,
         completed: false,
         failed: true
       }
