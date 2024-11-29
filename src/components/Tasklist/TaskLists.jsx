@@ -8,10 +8,10 @@ const TaskLists = ({data}) => {
   return (
     <div id='tasklist' className='tasklist-container flex flex-nowrap  items-center justify-start gap-5 text-white py-10 overflow-x-auto'>
       {data.tasks.map((item,index)=>{
-        if(item.newTask) return <NewTask key={index}/>;
-        if(item.active) return <AcceptedTask key={index}/>;
-        if(item.completed) return <CompleteTask key={index}/>;
-        if(item.failed) return <FailedTask key={index}/>;
+        if(item.newTask) return <NewTask key={index} data={item} />;
+        if(item.active) return <AcceptedTask key={index} data={item} />;
+        if(item.completed) return <CompleteTask key={index} data={item} />;
+        if(item.failed) return <FailedTask key={index} data={item} />;
       })}
     </div>
   )
