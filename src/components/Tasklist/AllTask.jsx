@@ -1,34 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../Contexts/AuthProvider'
 
 const AllTask = () => {
+
+    const authData = useContext(AuthContext)
+
   return (
-    <div id='alltask' className='w-full bg-zinc-800 rounded mt-3 h-[25vh] p-5 text-white overflow-auto'>
-        <div className='flex items-center justify-between p-3 bg-red-400 rounded-md'>
-            <h3 className='text-lg'>Daksh Choudhary</h3>
-            <h3 className='text-lg'>Make a youtube Video</h3>
-            <h3 className='text-lg'>Status</h3>
+        <div className='bg-zinc-800 rounded mt-3 h-[33vh] px-5 pt-3 text-white'>
+            <div className='topbar flex justify-between p-3 bg-red-400 rounded-md mb-2'>
+                <h3 className='text-xl font-medium w-1/5'>Employee Name</h3>
+                <h3 className='text-xl font-medium w-1/5'>New Task</h3>
+                <h3 className='text-xl font-medium w-1/5'>Active Task</h3>
+                <h3 className='text-xl font-medium w-1/5'>Completed Task</h3>
+                <h3 className='text-xl font-medium w-1/5'>Failed Task</h3>
+            </div>
+            <div id='alltask' className='h-[calc(33vh-12vh)] overflow-y-auto'>
+                    {authData.employees.map((item,index)=>{
+                        return (
+                            <div key={index} className='flex justify-between p-3 border-emerald-500 border-2 rounded-md mb-2'>
+                                <h3 className='text-lg font-medium w-1/5'>{item.firstName}</h3>
+                                <h3 className='text-lg font-medium w-1/5 text-blue-500'>{item.taskCount.newTask}</h3>
+                                <h3 className='text-lg font-medium w-1/5 text-yellow-500'>{item.taskCount.active}</h3>
+                                <h3 className='text-lg font-medium w-1/5'>{item.taskCount.completed}</h3>
+                                <h3 className='text-lg font-medium w-1/5 text-red-500'>{item.taskCount.failed}</h3>
+                            </div>
+                        )
+                    })}
+            </div>
         </div>
-        <div className='flex items-center justify-between p-3 bg-blue-400 rounded-md mt-2'>
-            <h3 className='text-lg'>Daksh Choudhary</h3>
-            <h3 className='text-lg'>Make a youtube Video</h3>
-            <h3 className='text-lg'>Status</h3>
-        </div>
-        <div className='flex items-center justify-between p-3 bg-green-400 rounded-md mt-2'>
-            <h3 className='text-lg'>Daksh Choudhary</h3>
-            <h3 className='text-lg'>Make a youtube Video</h3>
-            <h3 className='text-lg'>Status</h3>
-        </div>
-        <div className='flex items-center justify-between p-3 bg-yellow-400 rounded-md mt-2'>
-            <h3 className='text-lg'>Daksh Choudhary</h3>
-            <h3 className='text-lg'>Make a youtube Video</h3>
-            <h3 className='text-lg'>Status</h3>
-        </div>
-        <div className='flex items-center justify-between p-3 bg-red-400 rounded-md mt-2'>
-            <h3 className='text-lg'>Daksh Choudhary</h3>
-            <h3 className='text-lg'>Make a youtube Video</h3>
-            <h3 className='text-lg'>Status</h3>
-        </div>
-    </div>
   )
 }
 
