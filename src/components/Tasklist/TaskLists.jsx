@@ -4,10 +4,10 @@ import FailedTask from './FailedTask';
 import CompleteTask from './CompletedTask';
 import AcceptedTask from './AcceptedTask';
 
-const TaskLists = ({data}) => {
+const TaskLists = (props) => {
   return (
     <div id='tasklist' className='tasklist-container flex flex-nowrap  items-center justify-start gap-5 text-white py-10 overflow-x-auto'>
-      {data.tasks.map((item,index)=>{
+      {props.data.tasks.map((item,index)=>{
         if(item.newTask) return <NewTask key={index} data={item} />;
         if(item.active) return <AcceptedTask key={index} data={item} />;
         if(item.completed) return <CompleteTask key={index} data={item} />;

@@ -5,8 +5,8 @@ import AllTask from '../Tasklist/AllTask'
 
 const AdminDashboard = (props) => {
   return (
-    <div className='pt-10 px-10'>
-        <Header changeUser={props.changeUser} />
+    <div className='pt-8 px-10'>
+        <Header changeUser={props.changeUser} user={props.user}  />
         <CreateTask />
         <AllTask />
     </div>

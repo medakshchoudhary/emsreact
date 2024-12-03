@@ -10,7 +10,7 @@ const Header = (props) => {
 
   return (
     <div className='flex justify-between items-center text-white'>
-      <h2 className='text-2xl font-semibold'>Hello <br /> <span className='font-bold text-3xl'>Daksh</span> 👋</h2>
+      <h2 className='text-2xl font-semibold'>Hello <br /> <span className='font-bold text-3xl'>{props.user === "admin" ? "Admin" : props.data.firstName + ' ' + props.data.lastName}</span> 👋</h2>
       <button onClick={handleLogout} className='bg-red-500 px-4 py-2 rounded-sm text-xl hover:bg-red-600'>Log Out</button>
     </div>
   )
